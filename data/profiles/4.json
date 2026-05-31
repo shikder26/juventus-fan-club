@@ -1,0 +1,17 @@
+{
+    "id": 4,
+    "player": "Manuel Locatelli",
+    "position": "Midfielder",
+    "age": 26,
+    "nationality": "Italy",
+    "height": "185cm",
+    "weight": "75kg",
+    "birthplace": "Lecco, Italy",
+    "appearances": 90,
+    "goals": 6,
+    "assists": 12,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2021,
+    "previous_clubs": "Sassuolo, AC Milan"
+}

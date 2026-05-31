@@ -1,0 +1,17 @@
+{
+    "id": 8,
+    "player": "Dusan Vlahovic",
+    "position": "Forward",
+    "age": 24,
+    "nationality": "Serbia",
+    "height": "190cm",
+    "weight": "82kg",
+    "birthplace": "Belgrade, Serbia",
+    "appearances": 70,
+    "goals": 35,
+    "assists": 10,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2022,
+    "previous_clubs": "Fiorentina"
+}

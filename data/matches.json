@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "homeTeam": "Juventus",
+    "awayTeam": "AC Milan",
+    "date": "15 June 2026",
+    "time": "20:45",
+    "stadium": "Allianz Stadium",
+    "status": "Upcoming",
+    "homeLogo": "Images/Teams/Juventus.png",
+    "awayLogo": "Images/Teams/milan.jpg"
+  },
+  {
+    "id": 2,
+    "homeTeam": "Juventus",
+    "awayTeam": "Manchester City",
+    "date": "22 June 2026",
+    "time": "18:00",
+    "stadium": "Allianz Stadium",
+    "status": "Upcoming",
+    "homeLogo": "Images/Teams/Juventus.png",
+    "awayLogo": "Images/Teams/manchester.jpg"
+  },
+  {
+    "id": 3,
+    "homeTeam": "Barcelona",
+    "awayTeam": "Juventus",
+    "date": "30 June 2026",
+    "time": "21:00",
+    "stadium": "Camp Nou",
+    "status": "Upcoming",
+    "homeLogo": "Images/Teams/bersolona.png",
+    "awayLogo": "Images/Teams/Juventus.png"
+  }
+]

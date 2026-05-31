@@ -1,0 +1,17 @@
+{
+    "id": 1,
+    "player": "Wojciech Szczęsny",
+    "position": "Goalkeeper",
+    "age": 33,
+    "nationality": "Poland",
+    "height": "195cm",
+    "weight": "90kg",
+    "birthplace": "Warsaw, Poland",
+    "appearances": 200,
+    "goals": 0,
+    "assists": 0,
+    "clean_sheets": 75,
+    "saves": 600,
+    "club_since": 2017,
+    "previous_clubs": "Arsenal, Roma"
+}

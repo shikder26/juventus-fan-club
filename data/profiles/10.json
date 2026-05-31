@@ -1,0 +1,17 @@
+{
+    "id": 10,
+    "player": "Arkadiusz Milik",
+    "position": "Forward",
+    "age": 29,
+    "nationality": "Poland",
+    "height": "186cm",
+    "weight": "80kg",
+    "birthplace": "Tychy, Poland",
+    "appearances": 50,
+    "goals": 18,
+    "assists": 5,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2022,
+    "previous_clubs": "Napoli, Marseille"
+}

@@ -1,0 +1,17 @@
+{
+    "id": 5,
+    "player": "Adrien Rabiot",
+    "position": "Midfielder",
+    "age": 28,
+    "nationality": "France",
+    "height": "192cm",
+    "weight": "80kg",
+    "birthplace": "Saint-Maurice, France",
+    "appearances": 120,
+    "goals": 15,
+    "assists": 10,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2019,
+    "previous_clubs": "Paris Saint-Germain"
+}

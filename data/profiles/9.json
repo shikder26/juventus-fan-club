@@ -1,0 +1,17 @@
+{
+    "id": 9,
+    "player": "Moise Kean",
+    "position": "Forward",
+    "age": 24,
+    "nationality": "Italy",
+    "height": "182cm",
+    "weight": "78kg",
+    "birthplace": "Vercelli, Italy",
+    "appearances": 90,
+    "goals": 20,
+    "assists": 8,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2021,
+    "previous_clubs": "Everton, Paris Saint-Germain"
+}

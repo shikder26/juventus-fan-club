@@ -1,0 +1,17 @@
+{
+    "id": 3,
+    "player": "Federico Gatti",
+    "position": "Defender",
+    "age": 25,
+    "nationality": "Italy",
+    "height": "190cm",
+    "weight": "84kg",
+    "birthplace": "Rivoli, Italy",
+    "appearances": 40,
+    "goals": 3,
+    "assists": 2,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2022,
+    "previous_clubs": "Frosinone"
+}

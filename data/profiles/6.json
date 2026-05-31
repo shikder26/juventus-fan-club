@@ -1,0 +1,17 @@
+{
+    "id": 6,
+    "player": "Paul Pogba",
+    "position": "Midfielder",
+    "age": 30,
+    "nationality": "France",
+    "height": "191cm",
+    "weight": "84kg",
+    "birthplace": "Lagny-sur-Marne, France",
+    "appearances": 180,
+    "goals": 34,
+    "assists": 40,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2022,
+    "previous_clubs": "Manchester United, Juventus (2012-2016)"
+}

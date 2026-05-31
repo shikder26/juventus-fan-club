@@ -1,0 +1,109 @@
+[
+   {
+    "player": "Wojciech Szczęsny",
+    "position": "Goalkeeper",
+    "age": 33,
+    "nationality": "Poland",
+    "image": "Images/Players/szczesny.jpg",
+    "flag": "Images/Flags/poland.jpg",
+    "id": 1
+     },
+   {
+    "player": "Danilo",
+    "position": "Defender",
+    "age": 31,
+    "nationality": "Brazil",
+    "image": "Images/Players/Danilo.jpg",
+    "flag": "Images/Flags/Brazil.jpg",
+    "id": 2
+     },
+    
+    {
+    "player": "Federico Chiesa",
+    "position": "Forward",
+    "age": 26,
+    "nationality": "Italy",
+    "image": "Images/Players/Federico.jpg",
+    "flag": "Images/Flags/Italy.jpg",
+    "id": 3
+     },
+      
+      {
+    "player": "Dusan Vlahovic",
+    "position": "Forward",
+    "age": 24,
+    "nationality": "Serbia",
+    "image": "Images/Players/Dusan.jpg",
+    "flag": "Images/Flags/Serbia.jpg",
+    "id": 4
+     },
+
+
+     {
+    "player": "Adrien Rabiot",
+    "position": "Midfielder",
+    "age": 28,
+    "nationality": "France",
+    "image": "Images/Players/Adrien.jpg",
+    "flag": "Images/Flags/France.jpg",
+    "id": 5
+     },
+
+     {
+    "player": "Manuel Locatelli",
+    "position": "Midfielder",
+    "age": 26,
+    "nationality": "Italy",
+    "image": "Images/Players/Manuel.jpg",
+    "flag": "Images/Flags/Italy.jpg",
+    "id": 6
+     },
+
+    {
+    "player": "Paul Pogba",
+    "position": "Midfielder",
+    "age": 30,
+    "nationality": "France",
+    "image": "Images/Players/Bremer.jpg",
+    "flag": "Images/Flags/France.jpg",
+    "id": 7
+
+    },
+    {
+    "player": "Timothy Weah",
+    "position": "Midfielder",
+    "age": 24,
+    "nationality": "USA",
+    "image": "Images/Players/Matia.jpg",
+    "flag": "Images/Flags/USA.jpg",
+    "id": 8
+
+    },
+
+     {
+    "player": "Moise Kean",
+    "position": "Forward",
+    "age": 24,
+    "nationality": "Italy",
+    "image": "Images/Players/Moise.jpg",
+    "flag": "Images/Flags/Italy.jpg",
+    "id": 9
+
+    },
+
+
+    {
+    "player": "Arkadiusz Milik",
+    "position": "Forward",
+    "age": 29,
+    "nationality": "Poland",
+    "image": "Images/Players/Arkadiusz.jpg",
+    "flag": "Images/Flags/Poland.jpg",
+    "id": 10
+
+    }
+   
+
+
+    
+]

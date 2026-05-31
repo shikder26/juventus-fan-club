@@ -1,0 +1,17 @@
+{
+    "id": 2,
+    "player": "Gleison Bremer",
+    "position": "Defender",
+    "age": 26,
+    "nationality": "Brazil",
+    "height": "188cm",
+    "weight": "85kg",
+    "birthplace": "Itapitanga, Brazil",
+    "appearances": 60,
+    "goals": 5,
+    "assists": 3,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2022,
+    "previous_clubs": "Torino"
+}

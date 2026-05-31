@@ -1,0 +1,17 @@
+{
+    "id": 7,
+    "player": "Federico Chiesa",
+    "position": "Forward",
+    "age": 26,
+    "nationality": "Italy",
+    "height": "175cm",
+    "weight": "73kg",
+    "birthplace": "Genoa, Italy",
+    "appearances": 80,
+    "goals": 25,
+    "assists": 20,
+    "clean_sheets": 0,
+    "saves": 0,
+    "club_since": 2020,
+    "previous_clubs": "Fiorentina"
+}

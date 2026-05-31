@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Juventus Secure Important Victory",
+        "category": "Match Report",
+        "date": "15 May 2026",
+        "description": "Juventus earned a valuable victory in their latest Serie A fixture with an impressive team performance.",
+        "image": "Images/News/news1.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "New Signing Joins Juventus Squad",
+        "category": "Transfer News",
+        "date": "10 May 2026",
+        "description": "Juventus officially announced the signing of a talented player to strengthen the squad for the upcoming season.",
+        "image": "Images/News/news2.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "Juventus Prepare For Derby Match",
+        "category": "Club News",
+        "date": "08 May 2026",
+        "description": "The team continues preparations for an important derby match with supporters expecting an exciting contest.",
+        "image": "Images/News/news3.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "Fan Event Announced",
+        "category": "Fan Club",
+        "date": "05 May 2026",
+        "description": "Juventus Fan Club members have been invited to attend a special event celebrating the club's history and achievements.",
+        "image": "Images/News/news4.jpg"
+    }
+]
