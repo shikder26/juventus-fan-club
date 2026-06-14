@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact - Juventus Fan Club</title>
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -12,7 +11,6 @@
 
 <div class="page">
 
-    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="brand">
             <div class="logo">J</div>
@@ -31,16 +29,13 @@
         </nav>
     </header>
 
-    <!-- Contact Banner -->
     <section class="page-banner contact-page-banner">
         <h1>CONTACT US</h1>
         <p>Have questions, feedback or fan club enquiries? We are here to help Juventus supporters.</p>
     </section>
 
-    <!-- Contact Main Section -->
     <section class="contact-main">
 
-        <!-- Contact Information -->
         <div class="contact-cards">
 
             <h2>GET IN TOUCH</h2>
@@ -79,24 +74,23 @@
 
         </div>
 
-        <!-- Contact Form -->
         <div class="contact-form-box">
 
             <h2>SEND US A MESSAGE</h2>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
 
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name" required>
+                <input type="text" name="from_name" placeholder="Enter your full name" required>
 
                 <label>Email Address</label>
-                <input type="email" placeholder="Enter your email address" required>
+                <input type="email" name="from_email" placeholder="Enter your email address" required>
 
                 <label>Subject</label>
-                <input type="text" placeholder="Enter message subject">
+                <input type="text" name="subject" placeholder="Enter message subject" required>
 
                 <label>Message</label>
-                <textarea placeholder="Write your message here" required></textarea>
+                <textarea name="message" placeholder="Write your message here" required></textarea>
 
                 <button type="submit" class="btn">SEND MESSAGE</button>
 
@@ -106,12 +100,10 @@
 
     </section>
 
-    <!-- Stadium Location -->
     <section class="stadium-section">
 
         <div class="stadium-box">
             <h2>FIND US</h2>
-
             <h3>ALLIANZ STADIUM</h3>
 
             <p>
@@ -124,7 +116,6 @@
 
     </section>
 
-    <!-- Social Connect Section -->
     <section class="connect-section">
 
         <div>
@@ -140,15 +131,12 @@
 
     </section>
 
-    <!-- Footer -->
     <footer>
 
         <div class="footer-content">
 
             <div class="footer-box footer-brand">
-                <img src="Images/Logo/Juventus.png"
-                     class="footer-logo"
-                     alt="Juventus Logo">
+                <img src="Images/Logo/Juventus.png" class="footer-logo" alt="Juventus Logo">
 
                 <div>
                     <h2>Juventus Fan Hub</h2>
@@ -158,7 +146,6 @@
 
             <div class="footer-box">
                 <h3>QUICK LINKS</h3>
-
                 <a href="index.html">Home</a>
                 <a href="players.html">Players</a>
                 <a href="matches.html">Matches</a>
@@ -168,7 +155,6 @@
 
             <div class="footer-box">
                 <h3>CLUB</h3>
-
                 <a href="#">About Juventus</a>
                 <a href="#">Achievements</a>
                 <a href="#">Stadium</a>
@@ -194,6 +180,32 @@
     </footer>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "YOxK4rLYqtvtyP0dF"
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+         "service_9vg90rs",
+        "template_iwgztij",
+         this
+        )
+        .then(function() {
+            alert("Thank you! We have received your information.");
+            document.getElementById("contact-form").reset();
+        })
+        .catch(function(error) {
+            alert("Message could not be sent. Please try again.");
+            console.error(error);
+        });
+    });
+</script>
 
 </body>
 

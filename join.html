@@ -1,10 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Join Fan Club - Juventus Fan Club</title>
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -42,49 +42,59 @@
 
         <h2>MEMBERSHIP FORM</h2>
 
-        <form class="join-form">
+        <form class="join-form" id="join-form">
 
             <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" required>
+            <input type="text" name="from_name" placeholder="Enter your full name" required>
 
             <label>Email Address</label>
-            <input type="email" placeholder="Enter your email address" required>
+            <input type="email" name="from_email" placeholder="Enter your email address" required>
+
+            <label>Age</label>
+            <input type="number" name="age" placeholder="Enter your age" min="10" max="100" required>
 
             <label>Country</label>
-            <input type="text" placeholder="Enter your country" required>
+            <input type="text" name="country" placeholder="Enter your country" required>
 
             <label>Favourite Player</label>
-            <input type="text" placeholder="Enter your favourite Juventus player">
+            <input type="text" name="favourite_player" placeholder="Enter your favourite Juventus player">
+
+            <label>How did you hear about us?</label>
+            <select name="hear_about">
+                <option>Social Media</option>
+                <option>Friend or Family</option>
+                <option>Juventus Website</option>
+                <option>Online Search</option>
+                <option>Fan Event</option>
+                <option>Other</option>
+            </select>
 
             <label>Why do you support Juventus?</label>
-            <textarea placeholder="Write your message here"></textarea>
+            <textarea name="message" placeholder="Write your message here"></textarea>
 
-           <label>Membership Type</label>
-            <select>
-           <option>Standard Member</option>
-           <option>Premium Member</option>
-           <option>Student Member</option>
-           </select>
+            <label>Membership Type</label>
+            <select name="membership_type">
+                <option>Standard Member</option>
+                <option>Premium Member</option>
+                <option>Student Member</option>
+            </select>
 
-          <button type="submit" class="btn">JOIN NOW</button>
+            <button type="submit" class="btn">JOIN NOW</button>
 
         </form>
+
         <div class="member-benefits">
 
-       <h3>MEMBER BENEFITS</h3>
+            <h3>MEMBER BENEFITS</h3>
 
-       <ul>
-        <li>Receive club news and updates</li>
-        <li>Access fan events and activities</li>
-        <li>Stay informed about upcoming matches</li>
-        <li>Become part of the Juventus fan community</li>
-      </ul>
+            <ul>
+                <li>Receive club news and updates</li>
+                <li>Access fan events and activities</li>
+                <li>Stay informed about upcoming matches</li>
+                <li>Become part of the Juventus fan community</li>
+            </ul>
 
-     </div>
-
-
-
-
+        </div>
 
     </section>
 
@@ -143,6 +153,32 @@
 
 </div>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init({
+    publicKey: "YOxK4rLYqtvtyP0dF"
+});
+
+document.getElementById("join-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_9vg90rs",
+        "template_tw3f5lm",
+        this
+    )
+    .then(function() {
+        alert("Thank you! Your membership request has been received.");
+        document.getElementById("join-form").reset();
+    })
+    .catch(function(error) {
+        alert("Membership request could not be sent. Please try again.");
+        console.error(error);
+    });
+});
+</script>
+
+</body>
 </html>
+```
