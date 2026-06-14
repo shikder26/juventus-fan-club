@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Juventus Fan Club Website</title>
 
-    <!-- Connect CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Connect JavaScript file -->
-    <script src="js/main.js" defer></script>
+     <script src="js/main.js" defer></script>
+         <!-- <script src="js/fixtures.js" defer></script> -->
+    </head>
 
 <body>
 
@@ -40,8 +40,8 @@
             <h1>WELCOME TO<br>JUVENTUS FAN HUB</h1>
             <p>Stay connected with Juventus news, players, match schedules and club history.</p>
 
-            <button class="btn">VIEW MATCHES</button>
-            <button class="btn-secondary">EXPLORE PLAYERS</button>
+            <a href="matches.html" class="btn">VIEW MATCHES</a>
+            <a href="players.html" class="btn-secondary">EXPLORE PLAYERS</a>
         </section>
 
         <!-- Club numbers -->
@@ -75,13 +75,19 @@
 
         <!-- Players loaded by JavaScript -->
         <section class="players-section">
-            <h2>FEATURED PLAYERS</h2>
 
-            <div id="players"></div>
+    <h2>FEATURED PLAYERS</h2>
 
-            <button class="btn">VIEW ALL PLAYERS</button>
-        </section>
+    <!-- JavaScript loads only 4 players here -->
+    <div id="players"></div>
 
+    <a href="players.html" class="btn">
+        VIEW ALL PLAYERS
+    </a>
+
+      </section>
+
+        <!-- Fixture section -->
         <!-- Fixture section -->
         <section class="fixtures">
     <h2>UPCOMING FIXTURE</h2>
@@ -94,7 +100,7 @@
             <div class="fixture-text">
                 <h3>6 May 2026</h3>
                 <p>20:45</p>
-                <p>Football Tournament</p>
+                <p>Juventus vs AC Milan</p>
             </div>
 
             <img src="Images/Teams/milan.jpg" class="team-logo">
@@ -106,7 +112,7 @@
             <div class="fixture-text">
                 <h3>20 May 2026</h3>
                 <p>18:45</p>
-                <p>Football Tournament</p>
+                <p>Barcelona vs Juventus</p>
             </div>
 
             <img src="Images/Teams/Juventus.png" class="team-logo">
@@ -116,9 +122,9 @@
             <img src="Images/Teams/Juventus.png" class="team-logo">
 
             <div class="fixture-text">
-                <h3>20 May 2026</h3>
-                <p>16:30</p>
-                <p>Football Tournament</p>
+                <h3>28 May 2026</h3>
+                <p>21:00</p>
+                <p>Juventus vs Manchester City</p>
             </div>
 
             <img src="Images/Teams/manchester.jpg" class="team-logo">
@@ -126,9 +132,11 @@
 
     </div>
 
-    <button class="btn fixture-btn">VIEW FULL SCHEDULE</button>
-     </section>
+     <<a href="matches.html" class="btn fixture-btn">
+     VIEW FULL SCHEDULE
+     </a>
 
+</section>
         <!-- Bottom section -->
        <footer>
 
@@ -137,7 +145,7 @@
         <!-- Logo Section -->
         <div class="footer-box footer-brand">
 
-    <img src="Images/Logo/Juventus.png"
+    <img src="Images/Logo/Logowh.png"
          class="footer-logo"
          alt="Juventus Logo">
 
@@ -146,7 +154,7 @@
         <p>Forza Juve! Always and everywhere.</p>
     </div>
 
-</div>
+          </div>
 
         <!-- Quick Links -->
         <div class="footer-box">
@@ -174,9 +182,10 @@
             <h3>FOLLOW US ON</h3>
 
             <div class="social-icons">
-                <img src="Images/Logo/Facebook.jpg">
-                <img src="Images/Logo/Instrafram.png">
-                <img src="Images/Logo/youtube.jpg">
+                <img src="Images/Logo/Face1.jpg">
+                <img src="Images/Logo/ins1.jpg">
+                <img src="Images/Logo/yout1.jpg">
+                 <img src="Images/Logo/x1.jpg">
             </div>
         </div>
 

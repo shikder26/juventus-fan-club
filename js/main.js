@@ -5,7 +5,15 @@ window.onload = () => {
             const playersDiv = document.getElementById('players');
             playersDiv.innerHTML = '';
 
-            data.forEach(player => {
+            let playersToShow = data;
+
+            // Home page shows only 4 players
+            if (document.title === "Juventus Fan Club Website") {
+                playersToShow = data.slice(0, 4);
+            }
+
+            // Players page shows all players
+            playersToShow.forEach(player => {
                 const div = document.createElement('div');
                 div.className = 'player';
 

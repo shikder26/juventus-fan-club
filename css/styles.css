@@ -42,20 +42,29 @@ img {
 }
 
 /* Simple logo box */
+/* Simple logo box */
 .logo {
+    width: 60px;
+    height: 60px;
     background-color: black;
+    border: 2px solid #d4af37;
     color: white;
-    font-size: 35px;
+    font-size: 36px;
     font-weight: bold;
-    padding: 15px 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
 }
 
 /* Navigation links */
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 18px;
-    font-size: 14px;
+    margin-left: 24px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -414,24 +423,37 @@ footer {
 /* Footer brand area */
 .footer-brand {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 15px;
 }
 
 /* Footer Juventus logo */
 .footer-logo {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
 /* Social media icons */
-.social-icons img {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
+.social-icons img {
+    width: 45px;
+    height: 45px;
+
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+
+    object-fit: contain;
+    box-sizing: border-box;
+}
 /* Copyright bar */
 .copyright {
     text-align: center;
@@ -891,6 +913,20 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
+}
+/* Gallery Section */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .legend-card {
@@ -1386,4 +1422,58 @@ footer {
     .score-box h1 {
         font-size: 40px;
     }
+}
+
+
+/* ===================================== */
+/* PAGE BACKGROUNDS */
+/* ===================================== */
+
+/* Players Page */
+.players-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.56), rgba(0,0,0,0.56)),
+        url("../Images/Background/players.jpg");
+}
+
+/* Matches Page */
+.matches-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../Images/Background/matches.jpg");
+}
+
+/* History Page */
+.history-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../Images/Background/history.jpg");
+}
+
+/* News Page */
+.news-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.10)),
+        url("../Images/Background/field.jpg");
+}
+
+/* Live Page */
+.live-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../Images/Background/live1.jpg");
+}
+
+/* Contact Page */
+.contact-page-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../Images/Background/contact.jpg");
+}
+
+/* Join Page */
+.join-banner {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.30)),
+        url("../Images/Background/live.jpg");
 }
