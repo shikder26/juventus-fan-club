@@ -9,162 +9,178 @@
 
 <body>
 
-    <div class="page">
+<div class="page">
 
-        <header class="navbar">
-            <div class="brand">
-                <div class="logo">J</div>
-                <h2>JUVENTUS FAN CLUB WEBSITE</h2>
-            </div>
-
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="players.html">Players</a>
-                <a href="matches.html">Matches</a>
-                <a href="history.html">History</a>
-                <a href="news.html">News</a>
-                <a href="live.html">Live</a>
-                <a href="contact.html">Contact</a>
-                <a href="join.html" class="join-btn">JOIN FAN CLUB</a>
-            </nav>
-        </header>
-
-        <section class="page-banner">
-            <h1>PLAYER PROFILE</h1>
-            <p>View player photo, position, nationality and profile details.</p>
-        </section>
-
-        <div id="player"></div>
-
-        <footer>
-
-    <div class="footer-content">
-
-        <!-- Logo Section -->
-        <div class="footer-box footer-brand">
-
-            <img src="Images/Logo/Juventus.png"
-                 class="footer-logo"
-                 alt="Juventus Logo">
-
-            <div>
-                <h2>Juventus Fan Hub</h2>
-                <p>Forza Juve! Always and everywhere.</p>
-            </div>
-
+    <header class="navbar">
+        <div class="brand">
+            <div class="logo">J</div>
+            <h2>JUVENTUS FAN CLUB WEBSITE</h2>
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-box">
-
-            <h3>QUICK LINKS</h3>
-
+        <nav>
             <a href="index.html">Home</a>
             <a href="players.html">Players</a>
             <a href="matches.html">Matches</a>
             <a href="history.html">History</a>
             <a href="news.html">News</a>
+            <a href="live.html">Live</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html" class="join-btn">JOIN FAN CLUB</a>
+        </nav>
+    </header>
 
-        </div>
+    <section class="page-banner">
+        <h1>PLAYER PROFILE</h1>
+        <p>View player photo, position, nationality and profile details.</p>
+    </section>
 
-        <!-- Club -->
-        <div class="footer-box">
+    <div id="player"></div>
 
-            <h3>CLUB</h3>
+    <footer>
 
-            <a href="#">About Juventus</a>
-            <a href="#">Achievements</a>
-            <a href="#">Stadium</a>
-            <a href="#">Gallery</a>
+        <div class="footer-content">
 
-        </div>
+            <div class="footer-box footer-brand">
+                <img src="Images/Logo/Logowh.png"
+                     class="footer-logo"
+                     alt="Juventus Logo">
 
-        <!-- Social -->
-        <div class="footer-box">
+                <div>
+                    <h2>Juventus Fan Hub</h2>
+                    <p>Forza Juve! Always and everywhere.</p>
+                </div>
+            </div>
 
-            <h3>FOLLOW US ON</h3>
+            <div class="footer-box">
+                <h3>QUICK LINKS</h3>
 
-            <div class="social-icons">
-                <img src="Images/Logo/Facebook.jpg" alt="Facebook">
-                <img src="Images/Logo/Instrafram.png" alt="Instagram">
-                <img src="Images/Logo/youtube.jpg" alt="YouTube">
+                <a href="index.html">Home</a>
+                <a href="players.html">Players</a>
+                <a href="matches.html">Matches</a>
+                <a href="history.html">History</a>
+                <a href="news.html">News</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>CLUB</h3>
+
+                <a href="./history.html#history">About Juventus</a>
+                <a href="./history.html#achievements">Achievements</a>
+                <a href="./history.html#stadium">Stadium</a>
+                <a href="./history.html#gallery">Gallery</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>FOLLOW US ON</h3>
+
+                <div class="social-icons">
+                    <img src="Images/Logo/Facebook.jpg" alt="Facebook">
+                    <img src="Images/Logo/Instrafram.png" alt="Instagram">
+                    <img src="Images/Logo/youtube.jpg" alt="YouTube">
+                </div>
             </div>
 
         </div>
 
-    </div>
+        <div class="copyright">
+            © 2026 Juventus Fan Hub. All Rights Reserved.
+        </div>
 
-    <div class="copyright">
-        © 2026 Juventus Fan Hub. All Rights Reserved.
-    </div>
+    </footer>
 
-</footer>
+</div>
 
-    <script>
-const urlParams = new URLSearchParams(window.location.search);
-const playerId = Number(urlParams.get('id'));
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const playerId = Number(urlParams.get("id"));
 
-fetch('data/players.json')
-    .then(response => response.json())
-    .then(data => {
-        const player = data.find(p => Number(p.id) === playerId);
-        const playerDiv = document.getElementById('player');
+    fetch("data/players.json")
+        .then(response => response.json())
+        .then(data => {
+            const player = data.find(p => Number(p.id) === playerId);
+            const playerDiv = document.getElementById("player");
 
-        playerDiv.innerHTML = `
-            <section class="player-details-card">
+            if (!player) {
+                playerDiv.innerHTML = `
+                    <section class="player-details-card">
+                        <div class="player-details-info">
+                            <h1>Player Not Found</h1>
+                            <p>The selected player profile could not be found.</p>
+                            <a href="players.html" class="btn">View All Players</a>
+                        </div>
+                    </section>
+                `;
+                return;
+            }
 
-                <div class="player-details-image">
-                    <img src="${player.image}" alt="${player.player}">
-                </div>
+            playerDiv.innerHTML = `
+                <section class="player-details-card">
 
-                <div class="player-details-info">
-                    <h1>${player.player}</h1>
-                    <p class="player-position">${player.position}</p>
-
-                    <div class="player-info-grid">
-                        <span>AGE</span><p>${player.age}</p>
-                        <span>NATIONALITY</span><p>${player.nationality}</p>
-                        <span>SQUAD NUMBER</span><p>${player.number || 'N/A'}</p>
-                        <span>POSITION</span><p>${player.position}</p>
+                    <div class="player-details-image">
+                        <img src="${player.image}" alt="${player.player}">
                     </div>
 
-                    <h3>CAREER STATS</h3>
+                    <div class="player-details-info">
+                        <h1>${player.player}</h1>
+                        <p class="player-position">${player.position}</p>
 
-                    <table class="career-table">
-                        <tr>
-                            <th>Season</th>
-                            <th>Club</th>
-                            <th>Apps</th>
-                            <th>Goal</th>
-                            <th>Assists</th>
-                        </tr>
-                        <tr>
-                            <td>2022/23</td>
-                            <td>Juventus</td>
-                            <td>${player.appearances || '34'}</td>
-                            <td>${player.goals || '0'}</td>
-                            <td>${player.assists || '0'}</td>
-                        </tr>
-                        <tr>
-                            <td>2023/24</td>
-                            <td>Juventus</td>
-                            <td>42</td>
-                            <td>16</td>
-                            <td>4</td>
-                        </tr>
-                    </table>
+                        <div class="player-info-grid">
+                            <span>AGE</span><p>${player.age}</p>
+                            <span>NATIONALITY</span><p>${player.nationality}</p>
+                            <span>SQUAD NUMBER</span><p>${player.number || "N/A"}</p>
+                            <span>POSITION</span><p>${player.position}</p>
+                        </div>
 
-                    <h3>About Player</h3>
-                    <p class="about-player">
-                        ${player.player} is a Juventus football player who represents the club with strong teamwork, discipline and professional performance.
-                    </p>
+                        <h3>CAREER STATS</h3>
 
-                    <a href="players.html" class="btn">View All Players</a>
-                </div>
+                        <table class="career-table">
+                            <tr>
+                                <th>Season</th>
+                                <th>Club</th>
+                                <th>Apps</th>
+                                <th>Goals</th>
+                                <th>Assists</th>
+                            </tr>
+                            <tr>
+                                <td>2022/23</td>
+                                <td>Juventus</td>
+                                <td>${player.appearances || "34"}</td>
+                                <td>${player.goals || "0"}</td>
+                                <td>${player.assists || "0"}</td>
+                            </tr>
+                            <tr>
+                                <td>2023/24</td>
+                                <td>Juventus</td>
+                                <td>42</td>
+                                <td>16</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
 
-            </section>
-        `;
-    });
+                        <h3>About Player</h3>
+
+                        <p class="about-player">
+                            ${player.player} is a Juventus football player who represents the club with strong teamwork, discipline and professional performance.
+                        </p>
+
+                        <a href="players.html" class="btn">View All Players</a>
+                    </div>
+
+                </section>
+            `;
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById("player").innerHTML = `
+                <section class="player-details-card">
+                    <div class="player-details-info">
+                        <h1>Error Loading Player</h1>
+                        <p>Player data could not be loaded.</p>
+                        <a href="players.html" class="btn">View All Players</a>
+                    </div>
+                </section>
+            `;
+        });
 </script>
 
 </body>

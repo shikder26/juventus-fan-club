@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Live - Juventus Fan Club</title>
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -12,7 +11,6 @@
 
 <div class="page">
 
-    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="brand">
             <div class="logo">J</div>
@@ -31,76 +29,41 @@
         </nav>
     </header>
 
-    <!-- Page Banner -->
     <section class="page-banner live-banner">
         <h1>LIVE MATCH CENTER</h1>
         <p>Follow live Juventus match information, score updates and upcoming match details.</p>
     </section>
 
-    <!-- Live Score Section -->
     <section class="live-section">
-
         <h2>LIVE SCORE</h2>
 
-        <div class="live-score-card">
-
-            <div class="live-team">
-                <img src="Images/Teams/Juventus.png" alt="Juventus">
-                <h3>Juventus</h3>
-            </div>
-
-            <div class="score-box">
-                <span class="live-badge">LIVE</span>
-                <h1>0 - 0</h1>
-                <p>Match not started</p>
-            </div>
-
-            <div class="live-team">
-                <img src="Images/Teams/milan.jpg" alt="AC Milan">
-                <h3>AC Milan</h3>
-            </div>
-
+        <div class="live-score-card" id="live-score-box">
+            <p>Loading live score...</p>
         </div>
-
     </section>
 
-    <!-- Next Match Section -->
     <section class="live-section">
-
         <h2>NEXT MATCH</h2>
 
-        <div class="next-match-box">
-            <p><strong>Fixture:</strong> Juventus vs AC Milan</p>
-            <p><strong>Date:</strong> 15 June 2026</p>
-            <p><strong>Time:</strong> 20:45</p>
-            <p><strong>Venue:</strong> Allianz Stadium</p>
-
-            <a href="matches.html" class="btn">VIEW MATCHES</a>
+        <div class="next-match-box" id="next-match-box">
+            <p>Loading next fixture...</p>
         </div>
-
     </section>
 
-    <!-- Match Updates Section -->
     <section class="live-section">
-
         <h2>MATCH UPDATES</h2>
 
-        <div class="updates-box">
-            <p><strong>00'</strong> Match updates will appear here when the game starts.</p>
-            <p><strong>15'</strong> Team news and important moments will be shown during the match.</p>
-            <p><strong>45'</strong> Half-time updates will be available here.</p>
-            <p><strong>90'</strong> Full-time result will be displayed after the match.</p>
+        <div class="updates-box" id="updates-box">
+            <p>Loading match updates...</p>
         </div>
-
     </section>
 
-    <!-- Footer -->
     <footer>
 
         <div class="footer-content">
 
             <div class="footer-box footer-brand">
-                <img src="Images/Logo/Juventus.png"
+                <img src="Images/Logo/Logowh.png"
                      class="footer-logo"
                      alt="Juventus Logo">
 
@@ -123,11 +86,14 @@
             <div class="footer-box">
                 <h3>CLUB</h3>
 
-                <a href="#">About Juventus</a>
-                <a href="#">Achievements</a>
-                <a href="#">Stadium</a>
-                <a href="#">Gallery</a>
-            </div>
+                <div class="footer-box">
+                 <h3>CLUB</h3>
+
+                <a href="history.html#history">About Juventus</a>
+                <a href="history.html#achievements">Achievements</a>
+                <a href="history.html#stadium">Stadium</a>
+                <a href="history.html#gallery">Gallery</a>
+                </div>
 
             <div class="footer-box">
                 <h3>FOLLOW US ON</h3>
@@ -149,6 +115,7 @@
 
 </div>
 
-</body>
+<script src="js/live.js"></script>
 
+</body>
 </html>

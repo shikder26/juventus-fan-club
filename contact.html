@@ -155,10 +155,14 @@
 
             <div class="footer-box">
                 <h3>CLUB</h3>
-                <a href="#">About Juventus</a>
-                <a href="#">Achievements</a>
-                <a href="#">Stadium</a>
-                <a href="#">Gallery</a>
+                <div class="footer-box">
+                 <h3>CLUB</h3>
+
+                   <a href="history.html#history">About Juventus</a>
+                   <a href="history.html#achievements">Achievements</a>
+                   <a href="history.html#stadium">Stadium</a>
+                   <a href="history.html#gallery">Gallery</a>
+                  </div>
             </div>
 
             <div class="footer-box">
@@ -182,28 +186,59 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
     emailjs.init({
         publicKey: "YOxK4rLYqtvtyP0dF"
     });
 
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
+    const SUPABASE_URL = "https://tpahfhrealsahjiddvau.supabase.co";
+    const SUPABASE_KEY = "sb_publishable_Of2oACR3hy1elgul7TCJJQ_CWMNoxgF";
+
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
         e.preventDefault();
 
-        emailjs.sendForm(
-         "service_9vg90rs",
-        "template_iwgztij",
-         this
-        )
-        .then(function() {
-            alert("Thank you! We have received your information.");
-            document.getElementById("contact-form").reset();
-        })
-        .catch(function(error) {
+        const form = this;
+
+        const fullName = form.from_name.value;
+        const email = form.from_email.value;
+        const subject = form.subject.value;
+        const message = form.message.value;
+
+        try {
+            await emailjs.sendForm(
+                "service_9vg90rs",
+                "template_iwgztij",
+                form
+            );
+
+            const { error } = await supabaseClient
+                .from("contact_messages")
+                .insert([
+                    {
+                        full_name: fullName,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    }
+                ]);
+
+            if (error) {
+             console.error("Supabase Error:", error);
+             alert(JSON.stringify(error));
+              return;
+                   }
+
+            alert("Thank you! Your message has been sent and saved.");
+            form.reset();
+
+        } catch (error) {
             alert("Message could not be sent. Please try again.");
             console.error(error);
-        });
+        }
     });
 </script>
 

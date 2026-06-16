@@ -28,11 +28,34 @@ img {
 /* Top navigation */
 .navbar {
     background-color: #111;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.brand h2 {
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+nav a {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
 
 /* Logo and website name */
 .brand {
@@ -74,13 +97,20 @@ nav a.active {
     color: #d4af37;
 }
 
+/* Navigation hover and active page */
+nav a:hover,
+nav a.active {
+    color: #d4af37;
+}
+
 /* Join button */
 .join-btn {
     background-color: #d4af37;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 4px;
     color: black;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .join-btn:hover {
@@ -342,17 +372,39 @@ nav a.active {
 .fixture-card {
     background-color: #333;
     width: 450px;
-    min-height: 80px;
-    padding: 10px;
+    min-height: 120px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+
+.fixture-card {
+    background-color: #333;
+    width: 450px;
+    min-height: 120px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Home page fixtures only */
+.fixtures .fixture-card {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}
+
+.fixtures .fixture-text h3,
+.fixtures .fixture-text p {
+    color: #111;
+}
+
 /* Team logo */
 .team-logo {
-    width: 55px;
-    height: 55px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -431,8 +483,8 @@ footer {
 
 /* Footer Juventus logo */
 .footer-logo {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
 }
 

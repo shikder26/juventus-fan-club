@@ -7,8 +7,8 @@
     "time": "20:45",
     "stadium": "Allianz Stadium",
     "status": "Upcoming",
-    "homeLogo": "Images/Teams/Juventus.png",
-    "awayLogo": "Images/Teams/milan.jpg"
+    "homeLogo": "Images/Teams/j2.png",
+    "awayLogo": "Images/Teams/A2.png"
   },
   {
     "id": 2,
@@ -18,8 +18,8 @@
     "time": "18:00",
     "stadium": "Allianz Stadium",
     "status": "Upcoming",
-    "homeLogo": "Images/Teams/Juventus.png",
-    "awayLogo": "Images/Teams/manchester.jpg"
+    "homeLogo": "Images/Teams/j2.png",
+    "awayLogo": "Images/Teams/m2.png"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "time": "21:00",
     "stadium": "Camp Nou",
     "status": "Upcoming",
-    "homeLogo": "Images/Teams/bersolona.png",
-    "awayLogo": "Images/Teams/Juventus.png"
+    "homeLogo": "Images/Teams/b2.png",
+    "awayLogo": "Images/Teams/j2.png"
   }
 ]
