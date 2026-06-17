@@ -31,7 +31,7 @@
     </header>
 
     <!-- Page Banner -->
-     <section class="page-banner history-banner">
+    <section class="page-banner history-banner">
         <h1>OUR HISTORY</h1>
         <p>Discover the story, achievements and legendary moments of Juventus Football Club.</p>
     </section>
@@ -154,25 +154,16 @@
 
         <div class="gallery-container">
             <img src="Images/Background.jpg" alt="Juventus Stadium">
-            
             <img src="Images/gallery/Gallery1.jpg" alt="Juventus Trophy">
-
             <img src="Images/gallery/Gallery2.jpg" alt="Juventus Fans">
-
             <img src="Images/gallery/Gallery3.jpg" alt="Juventus Team">
-
-           <img src="Images/gallery/Gallery4.jpg" alt="Juventus Celebration">
-
-           <img src="Images/gallery/Gallery5.jpg" alt="Allianz Stadium">
-
-          <img src="Images/gallery/Gallery6.jpg" alt="Juventus Legends">
-          <img src="Images/gallery/Gallery7.jpg" alt="Allianz Stadium">
-
-          <img src="Images/gallery/Gallery8.jpg" alt="Juventus Legends">
-
-
+            <img src="Images/gallery/Gallery4.jpg" alt="Juventus Celebration">
+            <img src="Images/gallery/Gallery5.jpg" alt="Allianz Stadium">
+            <img src="Images/gallery/Gallery6.jpg" alt="Juventus Legends">
+            <img src="Images/gallery/Gallery7.jpg" alt="Allianz Stadium">
+            <img src="Images/gallery/Gallery8.jpg" alt="Juventus Legends">
+        </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -181,8 +172,8 @@
 
             <div class="footer-box footer-brand">
                 <img src="Images/Logo/Brand.png"
-                     class="footer-logo"
-                     alt="Juventus Logo">
+                   class="footer-logo history-footer-logo"
+                    alt="Juventus Logo">
 
                 <div>
                     <h2>Juventus Fan Hub</h2>
@@ -207,7 +198,6 @@
                 <a href="history.html#achievements">Achievements</a>
                 <a href="history.html#stadium">Stadium</a>
                 <a href="history.html#gallery">Gallery</a>
-                
             </div>
 
             <div class="footer-box">
@@ -229,6 +219,44 @@
     </footer>
 
 </div>
+
+<!-- Gallery Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Large Gallery Image">
+    <span class="next">&#10095;</span>
+</div>
+
+<script>
+const images = document.querySelectorAll(".gallery-container img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        currentIndex = index;
+        lightbox.style.display = "flex";
+        lightboxImg.src = images[currentIndex].src;
+    });
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+});
+</script>
 
 </body>
 
